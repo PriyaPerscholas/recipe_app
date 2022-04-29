@@ -19,7 +19,7 @@ function Popular() {
                             <h3>Popular Picks</h3><br />
                             <Splide options={{
                                    perPage: 4,
-                                   arrows: false,
+                                   // arrows: false,
                                    pagination: false,
                                    drag: 'free',
                                    gap: '2%',
