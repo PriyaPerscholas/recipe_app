@@ -16,21 +16,21 @@ function Popular() {
        return (
               <div>
                      <Wrapper>
-                            <h3>Popular Picks</h3>
+                            <h3>Popular Picks</h3><br />
                             <Splide options={{
                                    perPage: 4,
                                    arrows: false,
                                    pagination: false,
                                    drag: 'free',
-                                   gap: '2px',
+                                   gap: '2%',
                             }}>
                                    {popular.map((recipe) => {
                                           return (
                                                  <SplideSlide>
                                                         <div>
                                                                <Card>
-                                                                      <p>{recipe.title}</p>
                                                                       <img src={recipe.image} alt={recipe.title} />
+                                                                      <p>{recipe.title}</p>
                                                                </Card>
                                                         </div>
                                                  </SplideSlide>
@@ -42,17 +42,18 @@ function Popular() {
        );
 }
 const Wrapper = styled.div`
-margin: 5rem 0rem;
+margin: 2rem 0rem;
 `;
 
 const Card = styled.div`
+max-height: 350px;
 img{
        border-radius: 2rem;
-       max-height: 250px;
+       height: 250px;
+       width: 250px;
 }
 p{
      color:black,
-     font-size:  
 }`;
 
 

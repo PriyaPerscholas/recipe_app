@@ -1,0 +1,63 @@
+h1 {
+       text-align: center;
+}
+
+.nav1 {
+       display: flex;
+       justify-content: space-around;
+       font-size: large;
+}
+
+.li1,
+.li2,
+.li3 {
+       color: rgb(78, 76, 76)
+}
+
+fieldset {
+       margin: 2em 0;
+       padding: 1em 2em;
+       border: solid 1px #ccc;
+       border-radius: 6px;
+       min-width: 200px;
+}
+
+legend {
+       font-size: 1.25em;
+       padding: 0 .25em;
+       color: #999;
+}
+
+label {
+       display: block;
+       margin-top: 1em;
+}
+
+.tit1,
+.tit2 {
+       padding: .5em;
+       margin: 10px;
+       border-radius: 15px;
+       width: 50%;
+       border: 1px solid #999;
+}
+
+
+input[type=textarea] {
+       padding: .5em;
+       margin: 10px;
+       border-radius: 15px;
+       width: 50%;
+       border: 1px solid #999;
+       height: 150px;
+       resize: vertical;
+}
+
+button {
+       padding: .5em 1em;
+       background-color: #333;
+       color: #fff;
+       font-size: .8em;
+       border-radius: 6px;
+       align-content: center;
+}

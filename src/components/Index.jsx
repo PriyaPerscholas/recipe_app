@@ -1,22 +1,21 @@
 import React from 'react'
+import { getRecipes } from "../services/recipeapi"
 import { useState, useEffect } from 'react'
-import { getVeggie } from '../services/recipeapi'
+import '../App.css'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import styled from 'styled-components'
 import '@splidejs/react-splide/css'
 
-function Veggie() {
-       const [veggie, setVeggie] = useState([])
+function Index() {
+       const [data, setData] = useState([])
        useEffect(() => {
-              getVeggie()
-                     .then((res) => {
-                            setVeggie(res.data.recipes)
-                     })
+              getRecipes()
+                     .then(res => setData(res.data))
        }, [])
        return (
               <div>
                      <Wrapper>
-                            <h3>Veggie Picks</h3><br />
+                            <h3>Priya's Picks</h3><br />
                             <Splide options={{
                                    perPage: 4,
                                    arrows: false,
@@ -24,22 +23,22 @@ function Veggie() {
                                    drag: 'free',
                                    gap: '2px',
                             }}>
-                                   {veggie.map((recipe) => {
+                                   {data.map((recipe) => {
                                           return (
                                                  <SplideSlide>
                                                         <div>
                                                                <Card>
-                                                                      <img src={recipe.image} alt={recipe.title} />
-                                                                      <p>{recipe.title}</p>
+                                                                      <a href={'/${recipe._id}'}>
+                                                                             <img src={recipe.image} alt={recipe.title} /></a>
+                                                                      <h3>{recipe.title}</h3>
                                                                </Card>
                                                         </div>
                                                  </SplideSlide>
                                           )
-                                   })
-                                   }
+                                   })}
                             </Splide>
                      </Wrapper>
-              </div>
+              </div >
        )
 }
 const Wrapper = styled.div`
@@ -55,6 +54,7 @@ img{
 }
 p{
      color:black,
+     
 }`;
 
-export default Veggie
+export default Index
