@@ -46,12 +46,14 @@ function Show() {
                                    </div>
                             )}<br />
 
+
                             <div className='show3'>
-                                   <button onClick={() => { nav(`/priyarecipes/${id}/edit`) }}>Edit Recipe</button>
-                                   <button onClick={deleteTheRecipe}>Delete Recipe</button>
+                                   <a href className='sh' onClick={() => { nav(`/priyarecipes/${id}/edit`) }}>Edit Recipe</a>
+                                   <a href className='sh' onClick={deleteTheRecipe}>Delete Recipe</a>
                             </div>
                      </div>
               </div>
+
        )
 }
 

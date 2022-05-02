@@ -20,7 +20,7 @@ h1 {
 fieldset {
        margin: 2em 0;
        padding: 1em 2em;
-       border: solid 1px #ccc;
+       border: solid 1px rgb(141, 134, 134);
        border-radius: 6px;
        min-width: 200px;
 }
@@ -28,7 +28,7 @@ fieldset {
 legend {
        font-size: 1.25em;
        padding: 0 .25em;
-       color: #999;
+       color: rgb(70, 70, 70);
 }
 
 label {
@@ -59,7 +59,7 @@ button {
        padding: .5em 1em;
        background-color: rgb(175, 163, 163);
        color: black;
-       font-size: .8em;
+       font-size: 1em;
        border-radius: 6px;
        min-height: 30px;
        min-width: 120px;
@@ -97,4 +97,9 @@ button {
 button:hover {
        background-color: rgb(233, 219, 219);
 
+}
+
+.sh {
+       text-decoration: underline;
+       font-weight: bold;
 }
