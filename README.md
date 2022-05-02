@@ -1,6 +1,6 @@
 # Recipe World /Project 3
 
-##### Recipe world is fullstack working CRUD app and pulled recipe data from third party Spoonacular API is done during my internship in PerScholas.
+#### Recipe world is fullstack working CRUD app and pulled recipe data from third party Spoonacular API is done during my internship in PerScholas.
 -----------------------------------------------------------------------------
 ## Application Function
 -----------------------------------------------------------------------------------
@@ -24,3 +24,10 @@
 - Node.js
 - Heroku
 - Axios
+--------------------------------------------------------------------------------
+### Future Plan
+------------------------------------------------------------------------------
+- To implement search bar to search the recipes from api
+- To access the recipes according to cusines
+
+Heroku deployed link
