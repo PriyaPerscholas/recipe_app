@@ -58,7 +58,7 @@ input[type=textarea] {
 button {
        padding: .5em 1em;
        background-color: rgb(175, 163, 163);
-       color: #fff;
+       color: black;
        font-size: .8em;
        border-radius: 6px;
        min-height: 30px;

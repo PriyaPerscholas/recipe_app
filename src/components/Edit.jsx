@@ -39,7 +39,7 @@ function Edit() {
                                    <label >Ingredient</label>
                                    <input type="textarea" name="ingredient" />
                                    <label htmlFor='button'></label>
-                                   <button>submit</button>
+                                   <button>Submit</button>
                             </fieldset>
                      </form>
               </div>
