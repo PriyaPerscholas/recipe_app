@@ -57,7 +57,7 @@ input[type=textarea] {
 
 button {
        padding: .5em 1em;
-       background-color: #333;
+       background-color: rgb(175, 163, 163);
        color: #fff;
        font-size: .8em;
        border-radius: 6px;
@@ -81,9 +81,10 @@ button {
 
 }
 
-.show3 {
+.show3,
+.show4 {
        display: flex;
-       justify-content: space-around;
+       justify-content: space-between;
 }
 
 .img {
@@ -93,6 +94,7 @@ button {
        min-width: 300px;
 }
 
-.list {
-       display: list-item;
+button:hover {
+       background-color: rgb(233, 219, 219);
+
 }

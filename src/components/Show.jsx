@@ -8,6 +8,7 @@ function Show() {
        const nav = useNavigate()
        const { id } = useParams()
        const [data, setData] = useState({})
+       const [activetab, setActivetab] = useState('instruction')
        useEffect(() => {
               getRecipe(id)
                      .then(res =>
@@ -26,12 +27,25 @@ function Show() {
                             <img className='img' src={data.image} />
                      </div>
                      <div className='show2'>
-                            {/* <button>Instruction</button>
-                            <button>Ingredient</button> */}
-                            <h3>Instruction</h3><br />
-                            <p>{data.instruction}</p><br />
-                            <h3>Ingredient</h3><br />
-                            <ul className='list'><li>{data.ingredient}</li></ul><br />
+                            <div className='show4'>
+                                   <button className={activetab === 'instruction' ? 'active' : ' '} onClick={() => { setActivetab('instruction') }}>Instruction</button>
+                                   <button className={activetab === 'ingredient' ? 'active' : ' '} onClick={() => { setActivetab('ingredient') }}>Ingredient</button>
+                            </div>
+                            <br />
+                            {activetab === 'instruction' && (
+                                   <div>
+                                          <h3>Instruction</h3><br />
+                                          <p>{data.instruction}</p>
+                                   </div>
+                            )}<br />
+
+                            {activetab === 'ingredient' && (
+                                   <div>
+                                          <h3>Ingredient</h3><br />
+                                          <p>{data.ingredient}</p>
+                                   </div>
+                            )}<br />
+
                             <div className='show3'>
                                    <button onClick={() => { nav(`/priyarecipes/${id}/edit`) }}>Edit Recipe</button>
                                    <button onClick={deleteTheRecipe}>Delete Recipe</button>
