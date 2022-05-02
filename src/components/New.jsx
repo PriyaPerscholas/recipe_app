@@ -11,7 +11,7 @@ function New() {
                      title: event.target.title.value,
                      image: event.target.image.value,
                      instruction: event.target.instruction.value,
-                     ingridient: event.target.ingridient.value
+                     ingredient: event.target.ingredient.value
               }
               createRecipe(newrecipe)
               nav('/priyarecipes')
@@ -27,8 +27,8 @@ function New() {
                                    <input type="text" name="image" className='tit2' />
                                    <label htmlFor='instruction'>Instruction</label>
                                    <input type="textarea" name="instruction" />
-                                   <label >Ingridient</label>
-                                   <input type="textarea" name="ingridient" />
+                                   <label >Ingredient</label>
+                                   <input type="textarea" name="ingredient" />
                                    <label htmlFor='button'></label>
                                    <button>submit</button>
                             </fieldset>

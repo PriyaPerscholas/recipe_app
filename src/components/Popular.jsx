@@ -19,18 +19,19 @@ function Popular() {
                             <h3>Popular Picks</h3><br />
                             <Splide options={{
                                    perPage: 4,
-                                   // arrows: false,
+                                   arrows: false,
                                    pagination: false,
                                    drag: 'free',
                                    gap: '2%',
                             }}>
                                    {popular.map((recipe) => {
                                           return (
-                                                 <SplideSlide>
+                                                 <SplideSlide key={recipe.id}>
                                                         <div>
                                                                <Card>
-                                                                      <img src={recipe.image} alt={recipe.title} />
-                                                                      <p>{recipe.title}</p>
+                                                                      <a href={`/recipe/${recipe.id}`}>
+                                                                             <img src={recipe.image} alt={recipe.title} /></a>
+                                                                      <h4>{recipe.title}</h4>
                                                                </Card>
                                                         </div>
                                                  </SplideSlide>
@@ -52,8 +53,9 @@ img{
        height: 250px;
        width: 250px;
 }
-p{
+h4{
      color:black,
+     font-family: Arial, Helvetica, sans-serif;
 }`;
 
 

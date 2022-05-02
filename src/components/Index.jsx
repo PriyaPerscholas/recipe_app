@@ -11,14 +11,14 @@ function Index() {
        useEffect(() => {
               getRecipes()
                      .then(res => setData(res.data))
-       }, [])
+       }, [data])
        return (
               <div>
                      <Wrapper>
                             <h3>Priya's Picks</h3><br />
                             <Splide options={{
                                    perPage: 4,
-                                   // arrows: false,
+                                   arrows: false,
                                    pagination: false,
                                    drag: 'free',
                                    gap: '2px',
@@ -28,9 +28,9 @@ function Index() {
                                                  <SplideSlide>
                                                         <div>
                                                                <Card>
-                                                                      <a href={'/${recipe._id}'}>
+                                                                      <a href={`/priyarecipes/${recipe._id}`}>
                                                                              <img src={recipe.image} alt={recipe.title} /></a>
-                                                                      <h3>{recipe.title}</h3>
+                                                                      <h4>{recipe.title}</h4>
                                                                </Card>
                                                         </div>
                                                  </SplideSlide>

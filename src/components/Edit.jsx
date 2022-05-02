@@ -20,10 +20,10 @@ function Edit() {
                      title: event.target.title.value,
                      image: event.target.image.value,
                      instruction: event.target.instruction.value,
-                     ingridient: event.target.ingridient.value
+                     ingredient: event.target.ingredient.value
               }
               editRecipe(id, updatedRecipe)
-              nav('/${id}')
+              nav('/priyarecipes/${id}')
        }
        return (
               <div>
@@ -36,8 +36,8 @@ function Edit() {
                                    <input type="text" name="image" className='tit2' />
                                    <label htmlFor='instruction'>Instruction</label>
                                    <input type="textarea" name="instruction" />
-                                   <label >Ingridient</label>
-                                   <input type="textarea" name="ingridient" />
+                                   <label >Ingredient</label>
+                                   <input type="textarea" name="ingredient" />
                                    <label htmlFor='button'></label>
                                    <button>submit</button>
                             </fieldset>

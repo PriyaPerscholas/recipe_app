@@ -6,12 +6,15 @@ h1 {
        display: flex;
        justify-content: space-around;
        font-size: large;
+       font-family: Arial, Helvetica, sans-serif;
+       font-weight: bold;
 }
 
 .li1,
 .li2,
 .li3 {
-       color: rgb(78, 76, 76)
+       color: rgb(38, 37, 37);
+
 }
 
 fieldset {
@@ -58,4 +61,38 @@ button {
        color: #fff;
        font-size: .8em;
        border-radius: 6px;
+       min-height: 30px;
+       min-width: 120px;
+}
+
+.show {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       /* grid-gap: 2px; */
+}
+
+.show1,
+.show2 {
+       margin: 5em;
+       padding: 2em;
+       font-family: Arial, Helvetica, sans-serif;
+       border: 1px solid #999;
+       border-radius: 6px;
+
+}
+
+.show3 {
+       display: flex;
+       justify-content: space-around;
+}
+
+.img {
+       max-height: 500px;
+       max-width: 400px;
+       min-height: 400px;
+       min-width: 300px;
+}
+
+.list {
+       display: list-item;
 }
