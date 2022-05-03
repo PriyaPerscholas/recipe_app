@@ -16,10 +16,7 @@ export function getVeggie() {
        console.log(response)
        return response
 }
-// export function getDetails(id) {
-//        const response = axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=d0d9426d997a4eaead7b60c5f4c9b112`)
-//        return response
-// }
+
 export function getRecipes() {
        const response = axios.get(`https://priyarecipe-api.herokuapp.com/recipe`)
        return response

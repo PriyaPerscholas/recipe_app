@@ -1,7 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-// import { getDetails } from '../services/recipeapi.js'
 
 function Recipe() {
        const params = useParams()
@@ -12,10 +11,12 @@ function Recipe() {
                      `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=60badfad779f4c4dbd2c16534fcce164`);
               const detailData = await data.json();
               setDetails(detailData)
+              console.log(detailData)
        }
        useEffect(() => {
               fetchDetails()
        }, [params.name])
+
 
 
        return (
@@ -27,8 +28,12 @@ function Recipe() {
                      <div className='show2'>
                             <h3>Instruction</h3><br />
                             <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p><br />
+                            {/* <ul>
+                                   {details.extendedIngredients.map((ingredient) => <li key={ingredient.id}>{ingredient.original}</li>)}
+
+                            </ul> */}
                      </div>
-              </div>
+              </div >
        )
 }
 
