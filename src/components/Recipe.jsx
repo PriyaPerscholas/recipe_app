@@ -28,10 +28,6 @@ function Recipe() {
                      <div className='show2'>
                             <h3>Instruction</h3><br />
                             <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p><br />
-                            {/* <ul>
-                                   {details.extendedIngredients.map((ingredient) => <li key={ingredient.id}>{ingredient.original}</li>)}
-
-                            </ul> */}
                      </div>
               </div >
        )

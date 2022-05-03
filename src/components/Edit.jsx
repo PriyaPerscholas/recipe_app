@@ -23,7 +23,7 @@ function Edit() {
                      ingredient: event.target.ingredient.value
               }
               editRecipe(id, updatedRecipe)
-              nav('/priyarecipes/${id}')
+              nav(`/priyarecipes/${id}`)
        }
        return (
               <div>
@@ -31,13 +31,13 @@ function Edit() {
                             <fieldset>
                                    <legend><h3>Edit Recipe</h3></legend>
                                    <label htmlFor='title'>Title</label>
-                                   <input type="text" name="title" className='tit1' />
+                                   <input type="text" name="title" className='tit1' defaultValue={data.title} />
                                    <label htmlFor='image'>Image</label>
-                                   <input type="text" name="image" className='tit2' />
+                                   <input type="text" name="image" className='tit2' defaultValue={data.image} />
                                    <label htmlFor='instruction'>Instruction</label>
-                                   <input type="textarea" name="instruction" />
+                                   <input type="textarea" name="instruction" defaultValue={data.instruction} />
                                    <label >Ingredient</label>
-                                   <input type="textarea" name="ingredient" />
+                                   <input type="textarea" name="ingredient" defaultValue={data.ingredient} />
                                    <label htmlFor='button'></label>
                                    <button>Submit</button>
                             </fieldset>
