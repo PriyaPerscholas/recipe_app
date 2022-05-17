@@ -30,4 +30,4 @@
 - To implement search bar to search the recipes from api
 - To access the recipes according to cusines
 
-Heroku deployed link https://priyarecipes.herokuapp.com/
+Heroku deployed link https://priyaapp3.herokuapp.com/
